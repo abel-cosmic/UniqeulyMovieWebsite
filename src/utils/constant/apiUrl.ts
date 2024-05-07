@@ -1,0 +1,3 @@
+export const apiURL = "https://uniqeuly-movie-website-db-url.com";
+export const APIKEY_PUBLIC =
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NDI3ZTBhN2EzMTg5YzUxZWVkOTQyNTAxMzUxMjY3NiIsInN1YiI6IjY2M2EwYzVkNTQ1MDhkMDEyMmQzYzQ5ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.RQbmsoZtnhaITqtVbBXpdkVxJBx6K9Vz6jTvDApDF0E";
