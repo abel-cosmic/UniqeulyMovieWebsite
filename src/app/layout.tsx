@@ -20,7 +20,7 @@ export default function RootLayout({
         <body className="flex flex-col w-full">
           <Toaster />
           <NavMenu/>
-          <main>{children}</main>
+          <main className="">{children}</main>
         </body>
       </html>
     </ReactQueryClientProvider>

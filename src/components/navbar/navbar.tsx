@@ -19,8 +19,8 @@ import Image from "next/image";
 
 export function NavMenu() {
   return (
-    <NavigationMenu>
-      <div className="flex flex-row justify-between px-10 w-screen py-4 backdrop-blur-xl bg-slate-200/40">
+    <NavigationMenu className=" flex flex-row gap-4 justify-center items-center sticky top-0 right-0 left-0  w-screen py-4 backdrop-blur-xl bg-slate-200/50">
+      <div className="flex flex-row justify-between px-10 w-screen py-4 ">
         <Image
           src={
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAljIJJRFhG7zYppzhEfI7FSBJ8ZZhVSISIkXP0vMQw&s"
@@ -32,7 +32,7 @@ export function NavMenu() {
         <HamburgerMenu />
       </div>
 
-      <NavigationMenuList className="max-md:hidden flex flex-row gap-4 justify-center items-center sticky top-0 right-0 left-0  w-screen py-4 backdrop-blur-xl bg-slate-200/40">
+      <NavigationMenuList className="max-md:hidden flex flex-row gap-4 justify-center items-center sticky top-0 right-0 left-0  w-screen py-4 ">
         <Image
           src={
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAljIJJRFhG7zYppzhEfI7FSBJ8ZZhVSISIkXP0vMQw&s"

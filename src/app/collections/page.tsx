@@ -1,16 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
+import CollectionList from "@/layouts/collections/collectionList";
 
-export default function Home() {
-  const handleClick = () => {
-    toast({
-      title: "Clicked",
-    });
-  };
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col p-24">
+      <CollectionList/>
     </main>
   );
 }
