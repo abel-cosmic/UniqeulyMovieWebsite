@@ -3,13 +3,9 @@ import { DotSpinner } from "@uiball/loaders";
 import { Search } from "lucide-react";
 import { SetStateAction, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { ScrollArea } from "../ui/scroll-area";
 import {Button} from "../ui/button";
 import {Input} from "../ui/input";
-type SearchInput = {
-  search: string;
-  className?: string;
-};
+
 
 const SearchBar = () => {
   const [isLoading, setIsLoading] = useState(false);

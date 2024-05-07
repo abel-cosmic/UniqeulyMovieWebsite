@@ -6,59 +6,43 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import SearchBar from "../searchBar/searchBar";
 import { ModeToggle } from "../toogle/theme";
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
+import { Button } from "../ui/button";
+import { HamburgerMenu } from "../sheet/sheet";
+import Image from "next/image";
 
 export function NavMenu() {
   return (
     <NavigationMenu>
-      <NavigationMenuList className=" flex flex-row gap-4 justify-center items-center sticky top-0 right-0 left-0  w-screen py-4 backdrop-blur-xl bg-slate-200/40">
+      <div className="flex flex-row justify-between px-10 w-screen py-4 backdrop-blur-xl bg-slate-200/40">
+        <Image
+          src={
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAljIJJRFhG7zYppzhEfI7FSBJ8ZZhVSISIkXP0vMQw&s"
+          }
+          alt={"Logo"}
+          width={100}
+          height={100}
+        />
+        <HamburgerMenu />
+      </div>
+
+      <NavigationMenuList className="max-md:hidden flex flex-row gap-4 justify-center items-center sticky top-0 right-0 left-0  w-screen py-4 backdrop-blur-xl bg-slate-200/40">
+        <Image
+          src={
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAljIJJRFhG7zYppzhEfI7FSBJ8ZZhVSISIkXP0vMQw&s"
+          }
+          alt={"Logo"}
+          width={100}
+          height={100}
+        />
         <SearchBar />
+
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -81,6 +65,16 @@ export function NavMenu() {
           </Link>
         </NavigationMenuItem>
         <ModeToggle />
+        <NavigationMenuItem>
+          <Link href="/auth/signup" legacyBehavior passHref>
+            <Button>Sign Up</Button>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/auth/signin" legacyBehavior passHref>
+            <Button variant="outline">Sign In</Button>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
