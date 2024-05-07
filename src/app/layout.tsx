@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { ReactQueryClientProvider } from "@/utils/providers/ReactQueryProvider";
 import { Metadata } from "next";
 import "./globals.css";
+import {NavMenu} from "@/components/navbar/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +17,9 @@ export default function RootLayout({
   return (
     <ReactQueryClientProvider>
       <html lang="en">
-        <body>
+        <body className="flex flex-col w-full">
           <Toaster />
+          <NavMenu/>
           <main>{children}</main>
         </body>
       </html>
